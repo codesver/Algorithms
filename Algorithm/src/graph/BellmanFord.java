@@ -7,6 +7,16 @@ import java.util.stream.IntStream;
 
 public class BellmanFord {
 
+    static class Edge {
+        int from, to, weight;
+
+        public Edge(int from, int to, int weight) {
+            this.from = from;
+            this.to = to;
+            this.weight = weight;
+        }
+    }
+
     private final int MAX_VALUE = Integer.MAX_VALUE; // Sum of all positive cost + 1
 
     int[] bellmanFord(int[][] graph, int start) {
