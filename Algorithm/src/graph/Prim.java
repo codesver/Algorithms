@@ -20,7 +20,8 @@ public class Prim {
         int[][] mst = new int[graph.length][graph.length];
 
         boolean[] visited = new boolean[graph.length];
-        Queue<Edge> edges = new PriorityQueue<>(Comparator.comparingInt(o -> o.weight));
+        Queue<Edge> edges = new PriorityQueue<>
+                (Comparator.comparingInt(o -> o.weight));
         int randomNode = (int) (Math.random() * graph.length);
         edges.offer(new Edge(randomNode, randomNode, 0));
 
@@ -33,7 +34,10 @@ public class Prim {
                     = edge.weight;
             for (int node = 0; node < graph.length; node++)
                 if (graph[edge.unconnectedNode][node] != 0 && !visited[node])
-                    edges.offer(new Edge(edge.unconnectedNode, node, graph[edge.unconnectedNode][node]));
+                    edges.offer(new Edge(
+                            edge.unconnectedNode, node,
+                            graph[edge.unconnectedNode][node]
+                    ));
         }
 
         return mst;
