@@ -4,19 +4,19 @@ public class BubbleSorting extends Sorting {
 
     @Override
     public void sort(int[] nums) {
-        for (int i = nums.length - 1; i > 0; i--)
-            for (int j = 0; j < i; j++)
-                if (nums[j] > nums[j + 1]) swap(nums, j, j + 1);
+        for (int limit = nums.length - 1; limit > 0; limit--)
+            for (int index = 0; index < limit; index++)
+                if (nums[index] > nums[index + 1]) swap(nums, index, index + 1);
     }
 
     @Override
     void optimizedSort(int[] nums) {
         boolean swapped;
-        for (int i = nums.length - 1; i > 0; i--) {
+        for (int limit = nums.length - 1; limit > 0; limit--) {
             swapped = false;
-            for (int j = 0; j < i; j++) {
-                if (nums[j] > nums[j + 1]) {
-                    swap(nums, j, j + 1);
+            for (int index = 0; index < limit; index++) {
+                if (nums[index] > nums[index + 1]) {
+                    swap(nums, index, index + 1);
                     swapped = true;
                 }
             }
