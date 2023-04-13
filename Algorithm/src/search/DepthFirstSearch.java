@@ -2,9 +2,8 @@ package search;
 
 import java.util.Stack;
 
-public class DepthFirstSearch extends Search {
+public class DepthFirstSearch {
 
-    @Override
     void search(boolean[][] map, int start) {
         boolean[] visited = new boolean[map.length];
         visited[start] = true;

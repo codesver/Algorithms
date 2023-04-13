@@ -4,9 +4,8 @@ import java.util.Collections;
 import java.util.LinkedList;
 import java.util.Queue;
 
-public class BreadthFirstSearch extends Search {
+public class BreadthFirstSearch {
 
-    @Override
     void search(boolean[][] map, int start) {
         boolean[] visited = new boolean[map.length];
         visited[start] = true;
