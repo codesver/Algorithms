@@ -9,7 +9,7 @@ public class Dijkstra {
 
     private final int MAX_VALUE = Integer.MAX_VALUE; // Sum of all cost + 1
 
-    int[] solve(int[][] graph, int from) {
+    int[] dijkstra(int[][] graph, int from) {
         boolean[] visited = new boolean[graph.length];
         int[] distances = new int[graph.length];
         Arrays.fill(distances, MAX_VALUE);

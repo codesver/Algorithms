@@ -4,7 +4,7 @@ public class FloydWarshall {
 
     private final int MAX_VALUE = Integer.MAX_VALUE; // Sum of all cost + 1
 
-    int[][] solve(int[][] graph) {
+    int[][] floydWarshall(int[][] graph) {
         int[][] distances = new int[graph.length][graph.length];
         for (int from = 0; from < graph.length; from++)
             for (int to = 0; to < graph.length; to++)
