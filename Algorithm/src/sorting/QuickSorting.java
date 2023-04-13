@@ -20,6 +20,7 @@ public class QuickSorting extends Sorting {
     }
 
     int partition(int[] nums, int left, int right) {
+        // For optimization change middle element(left + right / 2) with left element
         int pivot = nums[left];
         int i = left, j = right;
         while (i < j) {
